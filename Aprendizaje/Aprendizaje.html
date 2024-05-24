@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Mechanics</title>
+    <link rel="icon" href="img/logo.jpeg">
+    <link rel="stylesheet" href="../Camp_Compa/nav.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://kit.fontawesome.com/112c18be1d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--FUENTES..................-->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+    <!-- formulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header class="barraNav">
+        <div class="barraNav__fondo"></div>
+        <h1 class="barraNav__logo"><a href="" class="barraNav__logoIni">Fluid <span class="barraNav__logoSec">Mechanics</span></a></h1>
+        <ul class="barraNav__elems">
+            <li class="barraNav__elems--item"><a href="../index.html" class="leter">Inicio</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="#" class="leter">Aprendizaje</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="../Fenomenos/fenomenos.html" class="leter">Fenómenos</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="../Elementos/elementos.html" class="leter">Elementos</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+
+            <li class="calculos"><a href="../Calculos/Calculos.html" class="calculos__leter leter">Calculos</a></li>
+        </ul>
+    </header>
+
+    <article class="content">
+        <section class="content__intro">
+            <div class="content__intro--linea"></div>
+            <h2 class="content__intro--titulo"><span class="uno">Aprendizaje</span>: Desentraña secretos, domina <span class="uno">tuberías</span>, domina la mecánica de fluidos.</h2>
+            <p class="content__intro--pr">Sumérgete en el fascinante mundo de la mecánica de fluidos, donde los principios 
+                ingeniosos gobiernan el flujo en sistemas complejos, desafiando y elevando tu comprensión 
+                técnica y creatividad ingenieril.</p>
+            <a href="#blockdeNavegacion" class="content__intro--link">Explorar Funciones</a>
+        </section>
+
+        <section class="blockdeNavegacion" id="blockdeNavegacion">
+
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Propiedades de los Fluidos</h2>
+                    <p class="blockdeNavegacion__item--text">Explora el fascinante mundo de los fluidos. ¡Experimenta y sorpréndete!</p>
+                    <a href="#propiFluid" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+    
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Presión y sus Prinsipios</h2>
+                    <p class="blockdeNavegacion__item--text">Descubre el poder de la presión, ¡Experimenta y amplia tu conocimiento!</p>
+                    <a href="#presPrin" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+    
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Caudal - Rapidez de flujo de fluido</h2>
+                    <p class="blockdeNavegacion__item--text">Comprende el caudal y la rapidez del flujo de fluidos. ¡Sorpréndete!</p>
+                    <a href="#caudal" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Ecuación de Continuidad</h2>
+                    <p class="blockdeNavegacion__item--text">Descubre el increíble comportamiento de los fluidos con la Ecuación de Continuidad!</p>
+                    <a href="#ecConti" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Conservación de la Energia y Ecuación de Bernoulli</h2>
+                    <p class="blockdeNavegacion__item--text">Explora la fascinante Ecuación de Bernoulli y maravíllate con su magia.</p>
+                    <a href="#consEnergia" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Ecuación General de la Energia</h2>
+                    <p class="blockdeNavegacion__item--text">Descubre la poderosa Ecuación General de la Energía y su impacto.</p>
+                    <a href="#ecGeneralEner" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Sistemas de Tuberias</h2>
+                    <p class="blockdeNavegacion__item--text">Explora los sistemas de tuberías Clase I, Clase II y Clase III.</p>
+                    <a href="#sisTuberi" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+
+            <div class="blockdeNavegacion__item">
+                <div class="texto">
+                    <h2 class="blockdeNavegacion__item--titulo">Sistemas de Tuberias en Paralelo</h2>
+                    <p class="blockdeNavegacion__item--text">Descubre la eficiencia de los sistemas de tuberías en paralelo. ¡Asómbrate!</p>
+                    <a href="#sisParale" class="blockdeNavegacion__item--link">Explorar</a>
+                </div>
+                <!-- <img class="blockdeNavegacion__item--img" src="../img/mas.jpg"> -->
+            </div>
+        </section>
+
+
+        <section class="propFluid" id="propiFluid">
+            <h2 class="propFluid__titulo">Propiedades de los Fluidos.</h2>
+            <p class="propFluid__intro text">
+                Las propiedades de los fluidos son cruciales en el diseño de sistemas de tuberías. 
+                Determinan la selección de materiales y afectan el comportamiento del flujo, incluyendo 
+                la viscosidad, densidad y presión. Esto asegura la eficiencia en el transporte de líquidos 
+                y gases, así como la optimización de la distribución y el rendimiento de los sistemas de tuberías.
+            </p>
+
+            <div class="propFluid__densidad">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Densidad</h3>
+                    <p class="propFluid__densidad--texto text">
+                        La densidad es una medida de la compacidad de un material, expresada como 
+                        la masa por unidad de volumen. Se calcula dividiendo la masa del objeto entre su volumen. 
+                        Una mayor densidad indica que una sustancia tiene más masa en un volumen dado.
+                    </p>
+                    <math class="propFluid__densidad--formula">
+                        <mrow>
+                        <mi>ρ</mi> <!-- Densidad -->
+                        <mo>=</mo> <!-- Igual -->
+                        <mfrac> <!-- Fracción -->
+                            <mi>m</mi> <!-- Masa -->
+                            <mi>V</mi> <!-- Volumen -->
+                        </mfrac>
+                        </mrow>
+                    </math>
+                </div>
+                
+                <img src="img/dens.jpg" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Supongamos que tienes un objeto con una masa de 200 gramos y un volumen 
+                        de 50 centímetros cúbicos. Calcula la densidad de este objeto.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Supongamos que tienes un objeto con una masa de 200 gramos y un volumen 
+                        de 50 centímetros cúbicos. Calcula la densidad de este objeto.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            <p class="text">
+                                Dado que la masa es de 200 gramos y el volumen es de 
+                                50 centímetros cúbicos, sustituimos estos valores en la fórmula: 
+                            </p>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--################################################################################################-->
+            <div class="propFluid__densidad old">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo title">Peso Especifico</h3>
+                    <p class="propFluid__densidad--texto text">
+                        El peso específico es una medida de la densidad relativa de un material 
+                        en comparación con el agua. Se calcula dividiendo la densidad del material 
+                        por la densidad del agua. El agua tiene un peso específico de 1 g/cm³.
+                    </p>
+                    <math class="propFluid__densidad--formula">
+                        <mrow>
+                        <mi>γ</mi> <!-- Densidad -->
+                        <mo>=</mo> <!-- Igual -->
+                        <mfrac> <!-- Fracción -->
+                            <mi>W</mi> <!-- Masa -->
+                            <mi>V</mi> <!-- Volumen -->
+                        </mfrac>
+                        </mrow>
+                    </math>
+                </div>
+                
+                <img src="img/pes.jpg" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Una pieza de metal tiene una densidad de 8.9 g/cm³. 
+                        Calcula su peso específico en comparación con el agua, cuya densidad es de 1 g/cm³.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Un bloque de madera tiene una densidad de 0.6 g/cm³. 
+                        Determina su peso específico en comparación con el agua, cuya densidad es de 1 g/cm³.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            <p class="text">
+                                Dado que la masa es de 200 gramos y el volumen es de 
+                                50 centímetros cúbicos, sustituimos estos valores en la fórmula: 
+                            </p>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--###################################################################################################-->
+            <div class="propFluid__relacion">
+                <div class="propFluid__relacion--sec1">
+                    <h3 class="propFluid__relacion--titulo">Relación Densidad Peso Especifico.</h3>
+                    <p class="propFluid__relacion--texto text">
+                        La densidad y el peso específico están relacionados porque el peso específico 
+                        es simplemente la densidad de un material multiplicada por la aceleración 
+                        debido a la gravedad. En otras palabras, el peso específico es la medida 
+                        de cuánto pesa un material en relación con el peso de un volumen igual 
+                        de agua (o cualquier otro líquido) a una temperatura y presión específicas. 
+                        Matemáticamente, el peso específico (γ) se calcula como el producto de 
+                        la densidad (ρ) y la aceleración debido a la gravedad (g):
+                    </p>
+                    <math class="propFluid__relacion--formula">
+                        <mrow>
+                        <mi>γ</mi> <!-- Densidad -->
+                        <mo>=</mo> <!-- Igual -->
+                        <mfrac> <!-- Fracción -->
+                            <mi>W</mi> <!-- Masa -->
+                            <mi>V</mi> <!-- Volumen -->
+                        </mfrac>
+                        </mrow>
+                    </math>
+                </div>
+                
+                <!-- <img src="img/inicio.png" class="propFluid__densidad--img"> -->
+        
+                <div class="propFluid__relacion--ejercicio unoo">
+                    <h3 class="propFluid__relacion--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__relacion--ejercicio-enunciado text">
+                        Una pieza de metal tiene una densidad de 8.9 g/cm³. 
+                        Calcula su peso específico en comparación con el agua, cuya densidad es de 1 g/cm³.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__relacion--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--################################## VOL #################################################################-->
+
+            <div class="propFluid__volEsp">
+                <div class="propFluid__volEsp--sec1">
+                    <h3 class="propFluid__volEsp--titulo">Volumen Especifico</h3>
+                    <p class="propFluid__volEsp--texto text">
+                        El volumen específico es una propiedad intensiva que describe la 
+                        relación entre el volumen de una sustancia y su masa. Se calcula 
+                        dividiendo el volumen total ocupado por la sustancia entre la masa 
+                        total. Esta medida es crucial en termodinámica, ingeniería y ciencias 
+                        de los materiales para caracterizar la densidad y el comportamiento 
+                        de fluidos y sólidos en diferentes condiciones.
+                    </p>
+                    <math class="propFluid__volEsp--formula">
+                        <mrow>
+                        <mi>V</mi> <!-- Densidad -->
+                        <mo>=</mo> <!-- Igual -->
+                        <mfrac> <!-- Fracción -->
+                            <mi>V</mi> <!-- Masa -->
+                            <mi>m</mi> <!-- Volumen -->
+                        </mfrac>
+                        </mrow>
+                    </math>
+
+                    <p>Donde: </p>
+
+                    <ul class="propFluid__volEsp--lista">
+                        <li>V Es el volumen especifico.</li>
+                        <li>V Es el volumen.</li>
+                        <li>m Es la masa.</li>
+                    </ul>
+                </div>
+                
+                <img src="img/vol.png" class="propFluid__volEsp--img">
+        
+                <div class="propFluid__volEsp--ejercicio unoo">
+                    <h3 class="propFluid__volEsp--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__volEsp--ejercicio-enunciado text">
+                        Calcular el volumen específico de un objeto cuya masa es de 500 gramos y su volumen es de 250 cm³.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__volEsp--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__volEsp--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--############################# Densida Relativa Sg ####################################-->
+            <div class="propFluid__volEsp">
+                <div class="propFluid__volEsp--sec1">
+                    <h3 class="propFluid__volEsp--titulo">Densidad Relativa o Gravedad Espcifica Sg</h3>
+                    <p class="propFluid__volEsp--texto text">
+                        La gravedad específica, también llamada densidad relativa, es una 
+                        medida adimensional que compara la densidad de una sustancia 
+                        con la del agua a condiciones estándar. Se calcula dividiendo 
+                        la densidad de la sustancia entre la del agua. Indica cuánto 
+                        más densa o menos densa es la sustancia en comparación con el agua. 
+                        Es útil en ciencia e ingeniería.
+                    </p>
+                    <math class="propFluid__volEsp--formula">
+                        <mrow>
+                        <mi>SG</mi> <!-- Densidad -->
+                        <mo>=</mo> <!-- Igual -->
+                        <mfrac> <!-- Fracción -->
+                            <mi>P</mi> <!-- Masa -->
+                            <mi>PH2O@4°C</mi> <!-- Volumen -->
+                        </mfrac>
+                        </mrow>
+                    </math>
+
+                    <p>Donde: </p>
+
+                    <ul class="propFluid__volEsp--lista">
+                        <li>SG: Es la gravedad especifica.</li>
+                        <li>P: Es la densidad.</li>
+                        <li>PH2O@4°C: Es la densidad del agua a 4°c.</li>
+                    </ul>
+                </div>
+                
+                <img src="img/densidrelati.jpg" class="propFluid__volEsp--img">
+        
+                <div class="propFluid__volEsp--ejercicio unoo">
+                    <h3 class="propFluid__volEsp--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__volEsp--ejercicio-enunciado text">
+                        Calcular el volumen específico de un objeto cuya masa es de 500 gramos y su volumen es de 250 cm³.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__volEsp--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__volEsp--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ########################### PRINSIPIOS DE PRESION ###########################-->
+        <section class="propFluid" id="propiFluid">
+            <h2 class="propFluid__titulo" id="presPrin">Presión y Sus Prinsipios</h2>
+            <p class="propFluid__intro text">
+                "La presión es una de las propiedades más importantes en el estudio de los fluidos, 
+                ya que influye en su comportamiento y en las fuerzas que ejercen sobre las superficies 
+                en contacto. Existen diferentes tipos de presión como la absoluta, manométrica y la 
+                presión debida a la altura de una columna de fluido, así como principios relacionados 
+                que son fundamentales para comprender los fenómenos de los fluidos." (Mott, 2006, p. 52)
+            </p>
+
+            <div class="propFluid__densidad">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Presión Absoluta</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "La presión absoluta es la presión total ejercida por un fluido, 
+                        medida con respecto al vacío perfecto. Es la suma de la presión 
+                        manométrica y la presión atmosférica, y es fundamental en el análisis 
+                        de sistemas de fluidos a diferentes altitudes." (Mott, 2006, p. 53)
+                        <br><br>
+                        Matemáticamente se expresa asi:
+                    </p>
+                    <div class="propFluid__densidad--formula pabs">
+                        Pabs = Pman + Patm
+                    </div>
+                </div>
+                
+                <img src="img/presion.avif" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Calcula la presión absoluta en una tubería con una presión manométrica de 
+                        3 bares y una presión atmosférica de 1 bar.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (3 bares) y la presión atmosférica (1 bar): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 3bar  + 1bar
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 4bar
+                            </div>
+
+                            Por lo tanto, la presión absoluta es de 4 bares.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Determina la presión absoluta en un tanque que muestra una presión 
+                        manométrica de 150 kPa y una presión atmosférica de 101.3 kPa.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (150 kPa) y la presión atmosférica (101.3 kPa): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 150Kpa  + 101.3Kpa
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 251.3Kpa
+                            </div>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--################################################################################################-->
+            <div class="propFluid__densidad old">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo title">Presión Manométrica (Ecuación Manométrica)</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "La presión manométrica es la diferencia entre la presión absoluta y la 
+                        presión atmosférica. La ecuación manométrica relaciona la presión manométrica 
+                        con la altura de una columna de fluido y su peso específico, y es útil en el 
+                        diseño de manómetros y sistemas de medición de presión." (Mott, 2006, p. 53)
+                    </p>
+                    <div class="propFluid__densidad--formula">
+                        Pm = ρ * g * h
+                    </div>
+                </div>
+                
+                <img src="img/manome.jpg" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Una columna de mercurio en un tubo manométrico mide 25 cm. 
+                        Calcula la presión manométrica si la densidad del mercurio es 13,6 g/cm³.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Un manómetro de tubo en U contiene agua y muestra una diferencia de altura 
+                        entre los dos extremos de 40 cm. ¿Cuál es la presión manométrica en kPa si 
+                        la densidad del agua es 1000 kg/m³?
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            <p class="text">
+                                Dado que la masa es de 200 gramos y el volumen es de 
+                                50 centímetros cúbicos, sustituimos estos valores en la fórmula: 
+                            </p>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--###################################################################################################-->
+            <div class="propFluid__relacion">
+                <div class="propFluid__relacion--sec1">
+                    <h3 class="propFluid__relacion--titulo">Principio de Pascal y Prensa Hidráulica</h3>
+                    <p class="propFluid__relacion--texto text">
+                        "El principio de Pascal establece que la presión aplicada a un fluido confinado 
+                        se transmite de manera uniforme en todas las direcciones y en todas las partes 
+                        del fluido. Este principio es fundamental en el diseño de sistemas hidráulicos 
+                        y prensas hidráulicas." 
+                        <br><br>
+                        "Una prensa hidráulica es un dispositivo que utiliza el principio de Pascal 
+                        para multiplicar la fuerza aplicada mediante el uso de áreas de pistón de 
+                        diferentes tamaños. Esto permite aplicar fuerzas enormes con una fuerza de 
+                        entrada relativamente pequeña.", Matemáticamente se expresa asi: 
+
+                    </p>
+                    <div class="propFluid__densidad--formula prensa">
+                        F2 x A2 = F1 x A1
+                    </div>
+                </div>
+                
+                <!-- <img src="img/inicio.png" class="propFluid__densidad--img"> -->
+        
+                <div class="propFluid__relacion--ejercicio unoo">
+                    <h3 class="propFluid__relacion--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__relacion--ejercicio-enunciado text">
+                        Un pistón de entrada de 5 cm de diámetro aplica 500 N. 
+                        ¿Cuál es la fuerza en el pistón de salida de 20 cm de diámetro 
+                        en una prensa hidráulica?
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__relacion--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--################################## VOL #################################################################-->
+
+            <div class="propFluid__volEsp">
+                <div class="propFluid__volEsp--sec1 pres">
+                    <h3 class="propFluid__volEsp--titulo">Capilaridad</h3>
+                    <p class="propFluid__volEsp--texto text">
+                        "La capilaridad es un fenómeno que ocurre cuando un fluido 
+                        se eleva o desciende en un tubo capilar debido a las fuerzas 
+                        intermoleculares entre el fluido y las paredes del tubo. Este 
+                        fenómeno es causado por las fuerzas de cohesión y adhesión." 
+                    </p>
+                </div>
+
+                <div class="propFluid__volEsp--sec1 pres">
+                    <h3 class="propFluid__volEsp--titulo">Fuerza de Cohesión</h3>
+                    <p class="propFluid__volEsp--texto text">
+                        "La fuerza de cohesión es la atracción intermolecular entre moléculas 
+                        similares del mismo fluido, y es responsable de la formación de la 
+                        superficie libre del fluido y de la tensión superficial."  
+                    </p>
+                </div>
+
+                <div class="propFluid__volEsp--sec1 pres">
+                    <h3 class="propFluid__volEsp--titulo">Fuerza de Adhesión</h3>
+                    <p class="propFluid__volEsp--texto text">
+                        "La fuerza de adhesión es la atracción intermolecular entre 
+                        moléculas de diferentes sustancias, como el fluido y las paredes 
+                        del tubo capilar. Esta fuerza, junto con la fuerza de cohesión, 
+                        es responsable del fenómeno de capilaridad." 
+                    </p>
+                </div>
+                
+                <div class="propFluid__volEsp--sec1 pres">
+                    <h3 class="propFluid__volEsp--titulo">Tensión Superficial</h3>
+                    <p class="propFluid__volEsp--texto text">
+                        "La tensión superficial es una propiedad de los fluidos que se 
+                        manifiesta como una fuerza contráctil en la superficie libre del 
+                        fluido, causada por las fuerzas de cohesión intermoleculares. Esta 
+                        propiedad es fundamental en el estudio de fenómenos como la capilaridad 
+                        y la formación de gotas." (Mott, 2006, p. 19)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ########################### CAUDAL Y RAPIDEZ DE FLUJO DE FLUIDO ###########################-->
+        <section class="propFluid" id="propiFluid">
+            <h2 class="propFluid__titulo" id="caudal">Caudal y Rapidez de Flujo de Fluido</h2>
+            <p class="propFluid__intro text">
+                "El caudal, la rapidez y el flujo son conceptos clave en el análisis de sistemas 
+                de fluidos, ya que describen la cantidad de fluido que se mueve a través de una 
+                sección transversal por unidad de tiempo. Estos conceptos son fundamentales para 
+                determinar el comportamiento del fluido, las fuerzas involucradas y para el diseño 
+                adecuado de sistemas de tuberías y componentes hidráulicos." (Mott, 2006, p. 154)
+            </p>
+
+            <div class="propFluid__densidad">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Rapidez de Flujo de Peso</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "La rapidez de flujo de peso es una medida del flujo másico de un 
+                        fluido por unidad de tiempo, y se expresa en unidades de peso por 
+                        unidad de tiempo. Es útil en el análisis de sistemas de fluidos 
+                        donde el peso es una consideración importante." (Mott, 2006, p. 155)
+                        <br><br>
+                        Matemáticamente se expresa asi:
+                    </p>
+                    <div class="propFluid__densidad--formula pabs">
+                        W = ρ * Q
+                    </div>
+                </div>
+                
+                <img src="img/rapflujo.avif" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Calcula la rapidez de flujo de peso de agua si 1500 kg 
+                        fluye por una tubería en 10 minutos.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (3 bares) y la presión atmosférica (1 bar): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 3bar  + 1bar
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 4bar
+                            </div>
+
+                            Por lo tanto, la presión absoluta es de 4 bares.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Determina la rapidez de flujo de peso de un aceite 
+                        si 500 kg pasa por una tubería en 5 minutos.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (150 kPa) y la presión atmosférica (101.3 kPa): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 150Kpa  + 101.3Kpa
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 251.3Kpa
+                            </div>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--################################################################################################-->
+            <div class="propFluid__densidad old">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo title">Flujo Masico</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "El flujo másico es una medida del flujo de masa de un fluido por unidad de 
+                        tiempo, y se expresa en unidades de masa por unidad de tiempo. Es fundamental 
+                        en el análisis de sistemas de fluidos, especialmente en procesos de transferencia 
+                        de calor y masa." (Mott, 2006, p. 155)
+                    </p>
+                    <div class="propFluid__densidad--formula">
+                        ṁ = ρ * Q
+                    </div>
+                </div>
+                
+                <img src="img/masico.jpg" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Calcula la rapidez de flujo másico si 200 kg de aire fluyen 
+                        por una tubería en 4 minutos.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Determina la rapidez de flujo másico de agua si 300 kg 
+                        pasan por una tubería en 6 minutos.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            <p class="text">
+                                Dado que la masa es de 200 gramos y el volumen es de 
+                                50 centímetros cúbicos, sustituimos estos valores en la fórmula: 
+                            </p>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--###################################################################################################-->
+            <div class="propFluid__relacion ecContinuidad">
+                <div class="propFluid__relacion--sec1">
+                    <h3 class="propFluid__relacion--titulo" id="ecConti">Ecuación de Continuidad</h3>
+                    <p class="propFluid__relacion--texto text">
+                        "La ecuación de continuidad es una expresión matemática fundamental que 
+                        describe la conservación de masa en sistemas de fluidos, relacionando la 
+                        velocidad del fluido con las áreas transversales en diferentes puntos del 
+                        flujo. Esta ecuación es esencial para el análisis y diseño de sistemas de 
+                        fluidos incompresibles, permitiendo realizar cálculos de velocidad, caudal 
+                        y otros parámetros críticos." (Mott, 2006, p. 156).
+
+                        <br><br>
+
+                        Arquímedes, el despistado genio griego, se sumergió en su bañera y descubrió 
+                        que el agua desplazada podía revelar si la corona del rey era de oro puro. Al 
+                        gritar "¡Eureka!" y correr desnudo por las calles, demostró que incluso los 
+                        baños pueden inspirar grandes ideas científicas y provocar momentos de hilaridad.
+                    </p>
+                    <div class="propFluid__densidad--formula eure">
+                        A1 x V1 = A2 x V2
+                    </div>
+                    <div class="propFluid__densidad--formula eure">
+                        Q1 = Q2
+                    </div>
+                </div>
+                
+                <!-- <img src="img/inicio.png" class="propFluid__densidad--img"> -->
+        
+                <div class="propFluid__relacion--ejercicio unoo">
+                    <h3 class="propFluid__relacion--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__relacion--ejercicio-enunciado text">
+                        Un tubo de 10 cm de diámetro tiene agua fluyendo a 2 m/s. ¿Cuál es la 
+                        velocidad de flujo en un tubo de 5 cm de diámetro conectado en serie 
+                        si la ecuación de continuidad se mantiene?
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__relacion--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--#################### CONSERVASIÓN DE LA ENERGIA ####################-->
+        <section class="propFluid" id="propiFluid">
+            <h2 class="propFluid__titulo" id="consEnergia">Conservación de la Energía Ecuación de Bernoulli</h2>
+            <p class="propFluid__intro text">
+                "La ecuación de Bernoulli es una expresión que describe la conservación de la 
+                energía en sistemas de fluidos en movimiento, relacionando la energía cinética, 
+                la energía potencial y la energía de flujo. Esta ecuación es fundamental para el 
+                análisis de sistemas de fluidos con variaciones de velocidad, presión y altura, 
+                y es ampliamente utilizada en el diseño de sistemas hidráulicos y aeronáuticos." 
+                (Mott, 2006, p. 153) 
+                <br><br>
+                Matemáticamente se expresa asi: 
+            </p>
+            <div class="propFluid__densidad--formula ecbernou">
+                <p>
+                    \(( \frac{P_1}{\gamma} ) + ( \frac{V_1^2}{2g} ) + Z_1 = ( \frac{P_2}{\gamma} ) + ( \frac{V_2^2}{2g} ) + Z_2\)
+                </p>
+            </div>
+            <div class="propFluid__densidad">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Energía Potencial</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "La energía potencial es la energía que posee un fluido debido a su 
+                        posición en un campo gravitacional, y está relacionada con la altura 
+                        del fluido. Es una de las componentes de la ecuación de Bernoulli y 
+                        es fundamental en el análisis de sistemas de fluidos con cambios de 
+                        elevación." (Mott, 2006, p. 166)
+                        <br><br>
+                        Matemáticamente se expresa asi:
+                    </p>
+                    <div class="propFluid__densidad--formula pabs">
+                        EP = γ * Z
+                    </div>
+                </div>
+                
+                <img src="img/enePoten.avif" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Calcula la energía potencial gravitatoria de un objeto de 5𝑘𝑔
+                        situado a una altura de 10𝑚 sobre el suelo, donde γ=9.8m/s2.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (3 bares) y la presión atmosférica (1 bar): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 3bar  + 1bar
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 4bar
+                            </div>
+
+                            Por lo tanto, la presión absoluta es de 4 bares.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Determina la energía potencial gravitatoria de un objeto de 2𝑘𝑔
+                        ubicado a una altura de 15𝑚, con 𝛾 = 9.81𝑚/𝑠2.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (150 kPa) y la presión atmosférica (101.3 kPa): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 150Kpa  + 101.3Kpa
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 251.3Kpa
+                            </div>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--################################################################################################-->
+            <div class="propFluid__densidad old">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo title">Energía Cinética</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "La energía cinética es la energía que posee un fluido debido a 
+                        su movimiento, y está relacionada con la velocidad del fluido. 
+                        Junto con la energía potencial y la energía de flujo, constituye 
+                        las componentes de la ecuación de Bernoulli para fluidos en movimiento." 
+                        (Mott, 2006, p. 166)
+                    </p>
+                    <div class="propFluid__densidad--formula">
+                        <p>
+                            \( EC = \frac{V^2}{2g} \)
+                        </p>
+                    </div>
+                </div>
+                
+                <img src="img/eneCine.jpg" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Calcula la energía cinética de un objeto con velocidad 𝑉 = 10𝑚/𝑠
+                        V=10m/s en un campo gravitacional 𝑔 = 9.8 𝑚/𝑠2 g=9.8m/s2.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                        Determina la velocidad de un objeto cuya energía cinética es 500𝐽
+                        en un campo gravitacional 𝑔 = 9.8 𝑚/𝑠2 g = 9.8m/s 2.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            <p class="text">
+                                Dado que la masa es de 200 gramos y el volumen es de 
+                                50 centímetros cúbicos, sustituimos estos valores en la fórmula: 
+                            </p>
+
+                            <math class="propFluid__densidad--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--###################################################################################################-->
+            <div class="propFluid__densidad">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Energía de Flujo</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "La energía de flujo, también conocida como energía de presión, 
+                        es la energía que posee un fluido debido a la presión ejercida 
+                        sobre él. Es una componente fundamental de la ecuación de Bernoulli 
+                        y es esencial en el análisis de sistemas de fluidos con cambios de 
+                        presión." (Mott, 2006, p. 166)
+                        <br><br>
+                        Matemáticamente se expresa asi:
+                    </p>
+                    <div class="propFluid__densidad--formula pabs">
+                        <p>
+                            \( EF = \frac{P}{\gamma} \)
+                        </p>
+                    </div>
+                </div>
+                
+                <img src="img/enerFlujo.jpg" class="propFluid__densidad--img">
+        
+                <div class="propFluid__densidad--ejercicio unoo">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                            Un fluido tiene una presión de \( 200 \, Pa \) y una densidad de \( 10 \, kg/m^3 \). 
+                            Calcula la fuerza específica ejercida por la presión.
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (3 bares) y la presión atmosférica (1 bar): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 3bar  + 1bar
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 4bar
+                            </div>
+
+                            Por lo tanto, la presión absoluta es de 4 bares.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="propFluid__densidad--ejercicio doss">
+                    <h3 class="propFluid__densidad--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__densidad--ejercicio-enunciado text">
+                            2. Si la presión dentro de un recipiente es de \( 500 \, Pa \) y 
+                            la densidad del líquido es de \( 100 \, kg/m^3 \), ¿cuál es la fuerza específica del fluido?
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__densidad--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p class="text">
+                            <b>Solucion:</b> <br>
+                            Sumamos la presión manométrica (150 kPa) y la presión atmosférica (101.3 kPa): <br>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 150Kpa  + 101.3Kpa
+                            </div>
+
+                            <div class="propFluid__densidad--formula">
+                                Pabs = 251.3Kpa
+                            </div>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            
+        <!--############################# ECUACION GENERAL DE LA ENERGIA #############################-->
+        <section class="propFluid" id="propiFluid">
+            <!--###################################################################################################-->
+            <div class="propFluid__relacion ecContinuidad">
+                <div class="propFluid__relacion--sec1">
+                    <h3 class="propFluid__relacion--titulo" id="ecGeneralEner">Ecuación General de la Energía</h3>
+                    <p class="propFluid__relacion--texto text">
+                        "La ecuación general de la energía combina la ecuación de continuidad y 
+                        la ecuación de Bernoulli, e incorpora términos de pérdida de energía por 
+                        fricción y otros factores. Es una herramienta poderosa para el análisis 
+                        de sistemas de fluidos con pérdidas de energía significativas, permitiendo 
+                        realizar cálculos más precisos y diseños más eficientes." (Mott, 2006, p. 202)
+                    </p>
+                    <div class="propFluid__densidad--formula ecEner">
+                        <p>
+                            \( \frac{P_1}{\gamma} + \frac{V_1^2}{2g} + Z_1 + h_a - h_r - h_L = \frac{P_2}{\gamma} + \frac{V_2^2}{2g} + Z_2 \)
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- <img src="img/inicio.png" class="propFluid__densidad--img"> -->
+        
+                <div class="propFluid__relacion--ejercicio unoo">
+                    <h3 class="propFluid__relacion--ejercicio-titulo">Ejercicio</h3>
+                    <p class="propFluid__relacion--ejercicio-enunciado text">
+                            Un flujo de agua viaja a través de un sistema de tuberías. 
+                            Si la presión inicial es \(100 \, kPa\), la velocidad es 
+                            \(5 \, m/s\), \(Z_1 = 10 \, m\), \(Z_2 = 5 \, m\), y \(h_a = 2 \, 
+                            m\), calcula la presión final si \(h_r = 3 \, m\) y \(h_L = 1 \, m\).
+                    </p>
+                    <a href="#" id="enlace" class="propFluid__relacion--ejercicio-sol">Mostrar Solución</a> <!-- Enlace para mostrar/ocultar la solución -->
+                    <div id="solucion" class="oculto"> <!-- Div que contiene la solución (inicialmente oculto) -->
+                        <p>
+                            <b>Solucion:</b> <br>
+                            Para calcular la densidad se usa la formula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>m</mi> <!-- Masa -->
+                                    <mi>V</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Dado que la masa es de 200 gramos y el volumen es de 
+                            50 centímetros cúbicos, sustituimos estos valores en la fórmula: <br>
+
+                            <math class="propFluid__relacion--formula">
+                                <mrow>
+                                  <mi>ρ</mi> <!-- Densidad -->
+                                  <mo>=</mo> <!-- Igual -->
+                                  <mfrac> <!-- Fracción -->
+                                    <mi>200g</mi> <!-- Masa -->
+                                    <mi>50cm3</mi> <!-- Volumen -->
+                                  </mfrac>
+                                </mrow>
+                            </math>
+
+                            Entonces, la densidad del objeto es de 4 gramos por centímetro cúbico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--##################### SISTEMAS DE TUBERIAS EN SERIE #####################-->
+        <section class="propFluid" id="propiFluid">
+            <h2 class="propFluid__titulo" id="sisTuberi">Sistemas de Tuberías en Serie</h2>
+            <p class="propFluid__intro text">
+                "Los sistemas de tuberías en serie son configuraciones en las que varias 
+                tuberías están conectadas de manera consecutiva, y el fluido debe pasar 
+                por cada una de ellas en un orden específico. Estos sistemas son comunes 
+                en instalaciones industriales, residenciales y de distribución de fluidos, 
+                y su análisis es fundamental para garantizar un flujo adecuado y minimizar 
+                las pérdidas de energía." (Mott, 2006, p. 107)
+            </p>
+
+            <div class="propFluid__densidad serie">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Clase 1</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "Los sistemas de tuberías en serie de Clase 1 son aquellos donde 
+                        todas las tuberías tienen el mismo diámetro, lo que implica que 
+                        la velocidad del fluido es constante en todo el sistema. Esta 
+                        configuración simplifica el análisis y el cálculo de pérdidas 
+                        de energía." (Mott, 2006, p. 108)
+                    </p>
+                </div>
+                
+                <img src="img/sisClasei.jpg" class="propFluid__densidad--img">
+            </div>
+            
+            <div class="propFluid__densidad serie">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Clase 2</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "Los sistemas de tuberías en serie de Clase 2 son aquellos donde las 
+                        tuberías tienen diferentes diámetros, lo que implica que la velocidad 
+                        del fluido varía en diferentes secciones del sistema. Esto introduce 
+                        complejidad adicional en el análisis y requiere el uso de la ecuación 
+                        de continuidad." (Mott, 2006, p. 110)
+                    </p>
+                </div>
+                
+                <img src="img/sisClaseii.avif" class="propFluid__densidad--img">
+            </div>
+
+            <div class="propFluid__densidad serie">
+                <div class="propFluid__densidad--sec1">
+                    <h3 class="propFluid__densidad--titulo">Clase 3</h3>
+                    <p class="propFluid__densidad--texto text">
+                        "Los sistemas de tuberías en serie de Clase 3 son aquellos donde 
+                        existen accesorios como codos, válvulas y contracciones, los cuales 
+                        causan pérdidas de energía adicionales en el sistema. Estas pérdidas 
+                        deben ser consideradas en el análisis y requieren el uso de factores 
+                        de pérdida específicos." (Mott, 2006, p. 112)
+                    </p>
+                </div>
+                
+                <img src="img/sisClaseiii.jpg" class="propFluid__densidad--img">
+            </div>
+        </section>
+
+        <!--##################### SISTEMAS DE TUBERIAS EN PARALELO #####################-->
+        <section class="propFluid" id="propiFluid">
+            <!--###################################################################################################-->
+            <div class="propFluid__relacion sisParalelo">
+                <div class="propFluid__relacion--sec1" id="sisParale">
+                    <h3 class="propFluid__relacion--titulo">Sistema de Tuberías en Paralelo</h3>
+                    <p class="propFluid__relacion--texto text">
+                        "Los sistemas de tuberías en paralelo son configuraciones en las que 
+                        varias tuberías están conectadas de manera que el fluido puede tomar 
+                        diferentes rutas, dividiéndose y combinándose nuevamente en puntos 
+                        específicos. Estos sistemas son utilizados cuando se requiere una mayor 
+                        capacidad de flujo o redundancia, y su diseño y análisis implica considerar 
+                        la distribución de caudales y caídas de presión en cada rama." 
+                        (Mott, 2006, p. 117)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        
+
+    </article>
+    <script src="pro.js"></script> <!-- Enlace al archivo JavaScript -->
+
+</body>
+</html>

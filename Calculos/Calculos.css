@@ -1,0 +1,133 @@
+.cerrar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  left: 94%;
+  top: 90vh;
+  cursor: pointer;
+  color: white;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.grilla {
+  width: 100%;
+  height: 96vh;
+  border: solid black 2px;
+  overflow: scroll;
+}
+
+
+/*************************** Sistemas desaague ************/
+
+/*1. Contenedor */
+.elementos {
+  width: 80%;
+  height: 150vh;
+  font-family: 'roboto', sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  top: 140vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.elemento {
+  margin-top: 15vh;
+  width: 36em;
+  height: 70vh;
+  padding: 3vh;
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #1E90FF);
+  margin-bottom: 15vh;
+  margin-left: 15vh;
+  transition: 0.1s ease;
+}
+
+.imagen {
+  width: 100%;
+  height: 27vh;
+  margin-bottom: 3vh;
+}
+
+.titulo-elemento {
+  height: 3vh;
+  color: #6495ED;
+  font-size: 2.3vh;
+  margin-bottom: 2vh;
+  transition: 0.1s ease;
+}
+
+.descripcion {
+  height: 12vh;
+  font-size: 2vh;
+  text-align: justify;
+  margin-top: 3vh;
+}
+
+.link {
+  display: grid;
+  height: 7vh;
+  align-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  letter-spacing: 0.3vh;
+  font-size: 2.5vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1E90FF);
+  border: 3px gray solid;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+  margin-top: 3vh;
+  transition: 0.1s ease;
+}
+
+/*4. Animaición*/
+
+.elemento:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3vh);
+}
+
+.elemento:hover > .titulo-elemento {
+  color: #fff;
+}
+
+.link:hover {
+  color: white;
+  background: linear-gradient(to bottom, rgba(0.9, 0, 0, 0), #05599d);
+  transform: translatey(-0.1vh);
+}
+
+/* .link {
+  display: grid;
+  height: 7vh;
+  align-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  letter-spacing: 0.3vh;
+  font-size: 2.5vh;
+  width: 400px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1E90FF);
+  border: 3px gray solid;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+  transition: 0.1s ease;
+}
+
+
+.link:hover {
+  color: white;
+  background: linear-gradient(to bottom, rgba(0.9, 0, 0, 0), #05599d);
+  transform: translatey(-0.1vh);
+  cursor: pointer;
+} */

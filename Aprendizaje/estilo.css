@@ -1,0 +1,637 @@
+/*Organización del Codigo*/
+/*1. Contenedor */
+/*2. Propiedades Compartidas*/
+/*3. Elementos de Derecha a Izquierda*/
+/*4. Animaición*/
+/*4.1 transición*/
+/*4.2 Propiedades de transición*/
+
+body {
+    padding-bottom: 150vh;
+}
+
+/****************INICIO****************/
+/*1. Contenedor */
+.content {
+    transform: translateY(15.07vh);
+}
+
+/*2. Propiedades Compartidas*/
+.content, .content__intro {
+    position: relative;
+}
+
+.content__intro--pr, .content__intro--link {
+    font-family: 'roboto', sans-serif;
+    font-size: 2.5vh;
+    letter-spacing: 0.19vh;
+    margin-top: 10vh;
+}
+
+.content__intro--titulo, .content__intro--pr, .content__intro--link {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content__intro--titulo, .content__intro--pr, .content__intro--link {
+    width: 62.25%;
+    margin-left: 4.8%;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.content__intro {
+    width: 100%;
+    height: 100vh;
+    cursor: text;
+    background-image: url("img/imagen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 150px;
+}
+
+.content__intro--titulo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4.8vh;
+    letter-spacing: 0.28vh;
+    color: #aaaaaa;
+    background: linear-gradient(to left, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.1));
+    margin-bottom: 10vh;
+}
+
+.content__intro--pr {
+    color: gray;
+    background: linear-gradient(to right, rgba(0, 128, 255, 0), rgba(0, 128, 255, 0.5));
+}
+
+.content__intro--link {
+    display: block;
+    width: 15%;
+    height: 7vh;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.8;
+    color: #000;
+    background: linear-gradient(to bottom, #75c6ff, #4398d1);
+    border: 3px white solid;
+    box-sizing: content-box;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.content__intro--link, .content__intro--titulo, .content__intro--pr {
+    transition: 0.3s;
+}
+
+/*4.2 Propiedades de transición*/
+.content__intro--link:hover{
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+.content__intro--titulo:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content__intro--pr:hover {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/**BLOCK DE NAVEGACIÓN##########################################*/
+
+/*1. Contenedor */
+.blockdeNavegacion {
+    display: grid;
+    grid-template-rows: repeat(9, 24vh);
+    grid-gap: 5vh;
+    margin-left: 4.8%;
+    margin-top: 15vh;
+    margin-right: 15vh;
+    margin-bottom: 5vh;
+}
+
+/*2. Propiedades Compartidas*/
+.texto {
+    display: inline-block;
+}
+
+.blockdeNavegacion__item--titulo, .blockdeNavegacion__item--text, .blockdeNavegacion__item--link {
+    font-family: 'roboto', sans-serif;
+    margin-left: 5vh;
+    margin-bottom: 3vh;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.blockdeNavegacion__item { 
+    color: gray;
+    width: 100%;
+    height: 24vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #1E90FF);
+    transition: 0.1s ease;
+}
+
+.blockdeNavegacion__item--titulo { 
+    letter-spacing: 0.25vh;
+    margin-top: 3.125vh;
+}
+
+.blockdeNavegacion__item--text {
+    letter-spacing: 0.1vh;
+    margin-top: 3.125vh;
+}
+
+.blockdeNavegacion__item--link {
+    display: grid;
+    width: 8cm;
+    height: 7vh;
+    align-content: center;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    letter-spacing: 0.3vh;
+    font-size: 2.5vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1E90FF);
+    border: 3px gray solid;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+    transition: 0.1s ease;
+}
+
+.blockdeNavegacion__item--img {
+    width: 35.3%;
+    height: 24vh;
+    opacity: 0.2;
+    position: relative;
+    left: 25vh;
+    display: inline-block;
+    transition: 0.1s ease;
+}
+
+/*4. Animaición*/
+/*4.2 Propiedades de transición*/
+.blockdeNavegacion__item:hover {
+    color: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(0.3vh);
+}
+
+.blockdeNavegacion__item:hover > .blockdeNavegacion__item--img {
+    opacity: 0.5;
+}
+
+.blockdeNavegacion__item--link:hover {
+    color: white;
+    background: linear-gradient(to bottom, rgba(0.9, 0, 0, 0), #05599d);
+    transform: translatey(-0.15vh);
+}
+/*Codigo Organizado....#############################################################################*/
+
+
+
+/*POSICIÓN##############################################################*/
+
+/*Propiedades de los fluidos. #########################################################################################################################################*/
+
+/*1. Contenedor */
+.propFluid {
+    width: 100%;
+    font-family: 'roboto', sans-serif;
+    padding-top: 3vh;
+    position: relative;
+    /* background-color: #e7e7e7; */
+}
+
+.propFluid__densidad--sec1 {
+    display: inline-block;
+    width: 45%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+}
+
+/*2. Propiedades Compartidas*/
+.text {
+    line-height: 2;
+    text-align: justify;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.propFluid__titulo {
+    letter-spacing: 0.2vh;
+    font-size: 3.5vh;
+    width: 80%;
+    position: relative; /*****/
+    left: 4.8%;
+    margin-bottom: 3vh;
+    color: #6495ED;
+}
+
+.propFluid__intro {
+    width: 88%;
+    margin-bottom: 10vh;
+    margin-left: 4.8%;
+    margin-right: auto;
+}
+
+.propFluid__densidad, .propFluid__volEsp {
+    width: 88%;
+    height: 110vh;
+    margin-right: 2.5%;
+    margin-left: 4.8%;
+    margin-bottom: 7vh;
+    position: relative;
+}
+
+.propFluid__densidad--titulo, .propFluid__volEsp--titulo {
+    margin-bottom: 0.6vh;
+    color: #6495ED;
+}
+
+.propFluid__densidad--texto, .propFluid__volEsp--texto { /*****************/
+    margin-bottom: 3vh;
+}
+
+.propFluid__densidad--formula, .propFluid__volEsp--formula { /**********/
+    display: block;
+    font-size: 3.5vh;
+    width: 50%;
+    position: relative;
+    left: 47.5%;
+    margin-top: 13vh;
+    margin-bottom: 6vh;
+}
+
+.propFluid__densidad--img, .propFluid__volEsp--img {
+    width: 45%;
+    height: 50vh;
+    position: absolute; /**************1********************/
+    background-color: #6495ED;
+    left: 55%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);  /************2**********************/
+}
+
+.propFluid__densidad--img {
+    width: 40%;
+    left: 60%;
+    height: 55vh;
+}
+
+.propFluid__densidad--ejercicio {
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding-left: 6vh;
+    padding-right: 6vh; 
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    width: 45%;
+    margin-right: 5%;
+    position: absolute; /***************1*******************/
+    top: 55vh;
+    margin-top: 10vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1); /************2**********************/
+}
+
+.propFluid__densidad--ejercicio-titulo {
+    color: #6495ED;
+    letter-spacing: 0.3vh;
+}
+
+.propFluid__densidad--ejercicio-enunciado {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.propFluid__densidad--ejercicio-sol {
+    display: block;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #4398d1;
+    letter-spacing: 0.3vh;
+}
+
+.unoo {
+    position: absolute;
+    top: 55vh;
+}
+
+.doss {
+    float: right;
+    position: absolute;
+    top: 55vh;
+    left: 55%;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.propFluid__densidad--ejercicio-sol, .propFluid__densidad--ejercicio {
+    transition: 0.1s ease;
+}
+/*4.2 Propiedades de transición*/
+
+.propFluid__densidad--ejercicio-sol:hover {
+    color: #33c6ff;
+}
+
+.propFluid__densidad--ejercicio:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/***###########################################################*/
+
+.oculto {
+    display: none;
+    opacity: 0; /* Inicialmente oculto y transparente */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+  
+.mostrado {
+    display: block;
+    opacity: 1; /* Visible y completamente opaco */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+
+
+/*##########################################################*/
+
+
+/*1. Contenedor */
+.propFluid__relacion--sec1 {
+    display: inline-block;
+    width: 88%;
+    height: 50vh;
+    margin-left: 4.8%;
+    position: absolute;
+    top: 0;
+}
+
+/*2. Propiedades Compartidas*/
+.text {
+    line-height: 2;
+    text-align: justify;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.propFluid__relacion { /**********************************************/
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    padding-top: 7vh;
+    margin-bottom: 30vh;
+    position: relative;
+    background-color: #4398d1;
+}
+
+.propFluid__relacion--titulo {
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+    color: #fff;
+}
+
+.propFluid__relacion--texto {
+    margin-bottom: 3vh;
+    color: #fff;
+}
+
+.propFluid__relacion--formula {
+    display: block;
+    font-size: 3.5vh;
+    width: 5%;
+    position: relative;
+    left: 47.5%;
+    margin-top: 13vh;
+    margin-bottom: 6vh;
+    color: #fff;
+}
+
+.propFluid__relacion--ejercicio {
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding-left: 6vh;
+    padding-right: 6vh; 
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    width: 88%;
+    margin-left: 4.8%;
+    position: absolute;
+    top: 0vh;
+    margin-top: 3vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.propFluid__relacion--ejercicio-titulo {
+    color: #6495ED;
+    letter-spacing: 0.3vh;
+}
+
+.propFluid__relacion--ejercicio-enunciado {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.propFluid__relacion--ejercicio-sol {
+    display: block;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #4398d1;
+    letter-spacing: 0.3vh;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.propFluid__relacion--ejercicio-sol, .propFluid__densidad--ejercicio {
+    transition: 0.1s ease;
+}
+/*4.2 Propiedades de transición*/
+
+.propFluid__relacion--ejercicio-sol:hover {
+    color: #33c6ff;
+}
+
+.propFluid__relacion--ejercicio:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/*################### VOLUMEN ESPECIFICO ###########################################*/
+
+
+/*1. Contenedor */
+.propFluid__volEsp--sec1 { /*****************/
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+}
+
+/*2. Propiedades Compartidas*/
+.text {
+    line-height: 2;
+    text-align: justify;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+
+.propFluid__volEsp--formula { /**********************************/
+    display: inline-block;
+    left: 20%;
+}
+
+.propFluid__volEsp--lista {
+    list-style-type: none;
+}
+
+.propFluid__volEsp--img { /************************************/
+    top: 18vh;
+}
+
+.propFluid__volEsp--ejercicio {
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding-left: 6vh;
+    padding-right: 6vh; 
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    width: 100%;
+    margin-right: 5%;
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    margin-top: 25vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.propFluid__volEsp--ejercicio-titulo {
+    color: #6495ED;
+    letter-spacing: 0.3vh;
+}
+
+.propFluid__volEsp--ejercicio-enunciado {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.propFluid__volEsp--ejercicio-sol {
+    display: block;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #4398d1;
+    letter-spacing: 0.3vh;
+}
+
+.unoo {
+    position: absolute;
+    top: 55vh;
+}
+
+.doss {
+    float: right;
+    position: absolute;
+    top: 55vh;
+    left: 55%;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.propFluid__volEsp--ejercicio-sol, .propFluid__densidad--ejercicio {
+    transition: 0.1s ease;
+}
+/*4.2 Propiedades de transición*/
+
+.propFluid__volEsp--ejercicio-sol:hover {
+    color: #33c6ff;
+}
+
+.propFluid__volEsp--ejercicio:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/****** SECCIÓN DE PRESIÓN ******/
+.pabs {
+    position: relative;
+    left: 15vh;
+}
+
+.prensa {
+    color: white;
+    width: 32vh;
+    text-align: center;
+    left: calc(50% - 16vh);
+    top: -3vh;
+}
+
+.pres {
+    height: 35vh;
+    margin-bottom: 15vh;
+    width: 40vh;
+    margin-right: 10vh;
+    float: left;
+    letter-spacing: 0.03vh;
+    background: linear-gradient(45deg, #4398d1, #ffffff);
+    padding: 5vh;
+    box-sizing: content-box;
+    color: rgb(83, 84, 88);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pres h3  {
+    color: rgb(63, 65, 71);
+    margin-bottom: 2vh;
+    text-decoration: underline;
+}
+
+.pres:nth-child(4) {
+    width: 160vh;
+    height: 15vh;
+}
+
+.eure {
+    height: 5vh;
+    color: white;
+    margin: 0;
+    top: -0vh;
+}
+
+.eure:last-child {
+    position: relative;
+    left: 94vh;
+}
+
+.ecContinuidad {
+    background-color: #05599d;
+}
+
+.ecContinuidad h3 {
+    font-size: 4vh;
+    letter-spacing: 0.2vh;
+}
+
+.ecbernou {
+    left: 60vh;
+    top: -7vh;
+    margin-bottom: 3vh;
+}
+
+.ecEner {
+    top: -5vh;
+    left: 50vh;
+    color: white;
+}
+
+.serie {
+    height: 45vh;
+}
+
+.serie img {
+    height: 45vh;
+}
+
+.sisParalelo {
+    background-color: #05599d;
+    letter-spacing: 0.2vh;
+    /* font-size: 2.5vh; */
+    height: 45vh;
+}
+
+.sisParalelo h3 {
+    font-size: 4vh;
+    letter-spacing: 0.2vh;
+}
