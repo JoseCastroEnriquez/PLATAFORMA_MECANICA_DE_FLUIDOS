@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Mechanics</title>
+    <link rel="icon" href="../img/logo.jpeg">
+    
+    <script src="https://kit.fontawesome.com/112c18be1d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+
+    <link rel="stylesheet" href="../normalize.css">
+
+    <link rel="stylesheet" href="../Camp_Compa/nav.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header class="barraNav">
+        <div class="barraNav__fondo"></div>
+        <h1 class="barraNav__logo"><a href="" class="barraNav__logoIni">Fluid <span class="barraNav__logoSec">Mechanics</span></a></h1>
+        <ul class="barraNav__elems">
+            <li class="barraNav__elems--item"><a href="../index.html" class="leter">Inicio</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="../Aprendizaje/Aprendizaje.html" class="leter">Aprendizaje</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="../Fenomenos/fenomenos.html" class="leter">Fenómenos</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="#" class="leter">Elementos</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+
+            <li class="calculos"><a href="../Calculos/Calculos.html" class="calculos__leter leter">Calculos</a></li>
+        </ul>
+    </header>
+
+    <!--#################### SECCIÓN PARA LA MUESTRA DE ELEMENTO ####################-->
+    <div id="ini"></div>
+
+    <section class="muestra codos">
+        <img src="img/codo0.jpg" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Los codos de 90° en sistemas de tuberías redirigen el 
+                flujo de agua, permitiendo cambios de dirección en 
+                ángulos rectos sin interrupciones significativas.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Los codos en sistemas de tuberías se utilizan para 
+                cambiar la dirección del flujo de agua, adaptarse a 
+                la geometría del espacio, evitar obstáculos, y conectar 
+                tramos de tubería en ángulos específicos, mejorando 
+                la eficiencia y flexibilidad del sistema.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                acero inoxidable, cobre, PVC, hierro fundido 
+                y otros metales y plásticos resistentes.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Seleccion: </h2>
+                <p class="textoCua-muestra">
+                    La selección de codos en un sistema de tuberías 
+                    depende de factores como el material de las tuberías,
+                    la presión del agua, el diámetro de las tuberías, 
+                    el ángulo requerido, y las condiciones ambientales. 
+                    Se busca minimizar la resistencia al flujo y 
+                    asegurar la compatibilidad con otros componentes 
+                    del sistema.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <section class="muestra tubos" hidden="true">
+        <img src="img/tubo0.avif" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Los tubos transportan agua y otros fluidos en sistemas 
+                cerrados, conectando diversos componentes para asegurar 
+                un flujo continuo y eficiente.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Los tubos se utilizan para distribuir agua desde fuentes hasta puntos de consumo, conectar equipos como bombas y válvulas, y asegurar el flujo continuo en sistemas de suministro y drenaje.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Se fabrican en PVC, cobre, acero galvanizado, hierro dúctil y polietileno.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Seleccion: </h2>
+                <p class="textoCua-muestra">
+                    La selección de tubos depende del tipo de agua, presión, temperatura, diámetro requerido, compatibilidad con otros componentes, y condiciones ambientales del entorno de instalación.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+        
+    </section>
+
+    <section class="muestra valvulas" hidden="true">
+        <img src="img/bomba1.webp" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Las bombas mueven el agua a través del sistema de tuberías, incrementando la presión y asegurando un flujo constante y controlado.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Las bombas se utilizan para impulsar agua en sistemas de suministro, aumentar la presión en redes de distribución, drenar áreas inundadas, y mover agua entre tanques y otros componentes del sistema.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                se compone de varios elmentos, y tiene una recubierta metalica.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección</h2>
+                <p class="textoCua-muestra">
+                    La selección de bombas depende del caudal requerido, la altura de elevación, la presión deseada, la compatibilidad con el tipo de agua, la eficiencia energética, y las condiciones de operación específicas del sistema.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <section class="muestra tanque" hidden="true">
+        <img src="img/tanque0.jpg" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Los tanques de almacenamiento retienen agua, proporcionando reserva y regulación en sistemas de suministro y distribución para garantizar un flujo continuo.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Los tanques de almacenamiento se utilizan para almacenar agua potable, regular la presión en sistemas de distribución, proporcionar reserva para emergencias, y equilibrar variaciones en la demanda de agua en diferentes momentos del día.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Pueden fabricarse en concreto en el sitio, o pueden ser prefabricado, existen tanques de polímero o de metal.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección</h2>
+                <p class="textoCua-muestra">
+                    La selección de tanques depende de la capacidad requerida, la ubicación de instalación, el tipo de agua a almacenar, las condiciones ambientales, la durabilidad del material, y las normativas de salud y seguridad aplicables.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+        
+    </section>
+
+    <section class="muestra tanques" hidden="true">
+        <img src="img/entrada1.jpeg" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Las salidas de tanque son conexiones que permiten la salida controlada de agua desde el tanque de almacenamiento, regulando su flujo y distribución.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Las salidas de tanque se emplean para extraer agua de manera controlada del tanque, facilitando su distribución hacia el sistema de tuberías para su uso o consumo.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Suelen estar fabricadas en PVC, acero inoxidable o bronce, seleccionados según las necesidades específicas del sistema y el tipo de agua.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección: </h2>
+                <p class="textoCua-muestra">
+                    La selección de salidas de tanque se basa en el caudal requerido, la presión del sistema, la ubicación del punto de salida, la durabilidad del material y la compatibilidad con otros componentes del sistema de distribución de agua.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <section class="muestra entrdatanque" hidden="true">
+        <img src="img/reduccion1.jpg" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Las reducciones son accesorios que permiten el cambio gradual en el diámetro de una tubería, facilitando la adaptación entre secciones de diferente tamaño.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Se emplean para conectar tuberías de diferentes diámetros, facilitando la transición suave del flujo de agua y minimizando la pérdida de presión.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Se fabrican comúnmente en PVC, acero galvanizado, hierro dúctil y polietileno, seleccionados según la aplicación y las condiciones de operación.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección: </h2>
+                <p class="textoCua-muestra">
+                    La selección de reducciones se basa en los diámetros de las tuberías a conectar, el tipo de material, la presión y el caudal del agua, garantizando una transición eficiente y sin obstrucciones en el sistema de tuberías.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <section class="muestra reducciones" hidden="true">
+        <img src="img/union1.jpg" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Las uniones son dispositivos que conectan dos tramos de tubería, permitiendo desmontaje para mantenimiento o reparaciones.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Se emplean para unir tramos de tubería de manera segura y hermética, facilitando la instalación, reparación y mantenimiento del sistema.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Generalmente fabricadas en PVC, acero inoxidable o bronce, seleccionados según las necesidades específicas del sistema y el tipo de tubería.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección: </h2>
+                <p class="textoCua-muestra">
+                    La selección de uniones se basa en el tipo y diámetro de las tuberías a conectar, la presión y el tipo de fluido transportado, garantizando una conexión duradera y resistente a fugas.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <section class="muestra uniones" hidden="true">
+        <img src="img/te1.jpg" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                El accesorio T es una pieza de conexión en forma de "T" que se utiliza en sistemas de tuberías para dividir o combinar el flujo de agua en dos direcciones perpendiculares.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Se emplea para ramificar el flujo de agua en una tubería principal, permitiendo la conexión de dos tramos adicionales de tubería en ángulos rectos.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Fabricado comúnmente en PVC, acero galvanizado, bronce o hierro dúctil, dependiendo de los requisitos de resistencia y compatibilidad del sistema.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección: </h2>
+                <p class="textoCua-muestra">
+                    La selección del accesorio T se basa en el diámetro de la tubería, la presión del sistema, el material de la tubería y las necesidades específicas de la distribución de agua en el sistema de tuberías.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <section class="muestra tes" hidden="true">
+        <img src="img/valvula1.webp" class="imagen-muestra">
+        <div class="boton-left">
+            <img src="img/rigth.png">
+        </div>
+
+        <div class="boton-rigth">
+            <img src="img/left.png">
+        </div>
+
+        <!-- <div class="contenido"> -->
+            <h2 class="titulo-muestra">Descripcion</h2>
+            <p class="texto-muestra">
+                Las válvulas son dispositivos de control que regulan el flujo de agua en sistemas de tuberías, permitiendo abrir, cerrar o modular el paso del líquido.
+            </p>
+
+            <h2 class="tituloSec-muestra">Usos</h2>
+            <p class="textoSec-muestra">
+                Se utilizan para controlar el caudal de agua, regular la presión, detener o permitir el flujo en diferentes secciones del sistema de tuberías.
+            </p>
+
+            <h2 class="tituloTer-muestra">Materiales</h2>
+            <p class="textoTer-muestra">
+                Fabricadas en una variedad de materiales, como bronce, acero inoxidable, PVC y hierro fundido, seleccionados según la aplicación y las condiciones de operación.
+            </p>
+
+            <div class="otras-especificaciones">
+                <h2 class="tituloCua-muestra">Selección: </h2>
+                <p class="textoCua-muestra">
+                    La selección de válvulas se basa en el tipo de fluido, la presión y temperatura de trabajo, el tamaño de la tubería, el tipo de accionamiento (manual o automático), y las características específicas del sistema de tuberías y sus requerimientos de control de flujo.
+                </p>
+            </div>
+            
+        <!-- </div> -->
+    </section>
+
+    <!--########################################-->
+
+    <section class="elementos">
+        <div class="elemento">
+            <img src="img/codo0.jpg">
+            <h2 class="titulo-elemento">Codos</h2>
+            <p class="descripcion">
+                Los codos de 90° en sistemas de tuberías redirigen el flujo de agua, permitiendo cambios de dirección en ángulos rectos sin interrupciones significativas.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/tubo0.avif" class="imagen">
+            <h2 class="titulo-elemento">Tubos</h2>
+            <p class="descripcion">
+                Los tubos transportan agua y otros fluidos en sistemas cerrados, conectando diversos componentes para asegurar un flujo continuo y eficiente.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/bomba1.webp" class="imagen">
+            <h2 class="titulo-elemento">Bombas</h2>
+            <p class="descripcion">
+                Las bombas mueven el agua a través del sistema de tuberías, incrementando la presión y asegurando un flujo constante y controlado.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/tanque0.jpg" class="imagen">
+            <h2 class="titulo-elemento">Tanque</h2>
+            <p class="descripcion">
+                Los tanques de almacenamiento retienen agua, proporcionando reserva y regulación en sistemas de suministro y distribución para garantizar un flujo continuo.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/entrada1.jpeg" class="imagen">
+            <h2 class="titulo-elemento">Entrada Tanque</h2>
+            <p class="descripcion">
+                Las salidas de tanque son conexiones que permiten la salida controlada de agua desde el tanque de almacenamiento, regulando su flujo y distribución.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/reduccion1.jpg" class="imagen">
+            <h2 class="titulo-elemento">Reducciones</h2>
+            <p class="descripcion">
+                Las reducciones son accesorios que permiten el cambio gradual en el diámetro de una tubería, facilitando la adaptación entre secciones de diferente tamaño.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/union1.jpg" class="imagen">
+            <h2 class="titulo-elemento">Uniones</h2>
+            <p class="descripcion">
+                Las uniones son dispositivos que conectan dos tramos de tubería, permitiendo desmontaje para mantenimiento o reparaciones.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/te1.jpg" class="imagen">
+            <h2 class="titulo-elemento">T</h2>
+            <p class="descripcion">
+                Las uniones son dispositivos que conectan dos tramos de tubería, permitiendo desmontaje para mantenimiento o reparaciones.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+
+        <div class="elemento">
+            <img src="img/valvula1.webp" class="imagen">
+            <h2 class="titulo-elemento">Válvulas</h2>
+            <p class="descripcion">
+                Las válvulas son dispositivos de control que regulan el flujo de agua en sistemas de tuberías, permitiendo abrir, cerrar o modular el paso del líquido.
+            </p>
+            <a class="link" href="#ini">Ver más</a>
+        </div>
+    </section>
+
+    <section class="seleccion-diametros">
+        <select class="seleccion-tabla">
+          <option value="Tabla 1">Tabla 1</option>
+          <option value="Tabla 1">Tabla 1</option>
+          <option value="Tabla 1">Tabla 1</option>
+          <option value="Tabla 1">Tabla 1</option>
+          <option value="Tabla 1">Tabla 1</option>
+        </select>
+    
+        <h2 class="titulo-prime">CALCULADORA DE DIAMETROS.</h2> <!--Titulo-->
+    
+        <div class="campo-entrada">
+            <h3 class="titulo-calc">Ingrese el Caudal (l/s): </h3> <!--Titulo entrada-->
+            <div class="caudal" contenteditable="true"></div>  <!--Entrada-->
+            
+            <div class="boton" id="boton"> <!--Boton de calculo-->
+              Calcular
+            </div>
+    
+            <div class="refresh"> <!--Boton de refrescar-->
+              R
+            </div> 
+        </div>
+    
+        <div class="tabla"> <!--Tabla muestra de diametros y parametros-->
+          <table class="tablaa">
+            <tr class="titulos">
+                <th class="cabecera">Diametro Nominal (mm)</th>
+                <th class="cabecera">Diametro Nominal (in)</th>
+                <th class="cabecera">Peso (g/m)</th>
+                <th class="cabecera">Diametro Exterior (mm)</th>
+                <th class="cabecera">Diametro Exterior (in)</th>
+                <th class="cabecera">Espesor de pared minimo (mm)</th>
+                <th class="cabecera">Espesor de pared minimo (in)</th>
+                <th class="cabecera">Diametro interno promedio (mm)</th>
+            </tr>
+          </table>
+        </div>
+
+        <div class="al">
+            <div class="especificaciones"> <!--Especificaciones del material-->
+              
+            </div>
+      
+            <div class="boton2" id="boton" style="display: none;"> <!--Boton de calculo-->
+              Almacenar
+            </div>
+          </div>
+
+    </section>
+
+    <div class="cerrarNav">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
