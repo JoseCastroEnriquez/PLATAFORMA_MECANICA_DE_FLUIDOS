@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Mechanics</title>
+    <link rel="icon" href="../img/logo.jpeg">
+    <link rel="stylesheet" href="fenomenos.css">
+
+    <script src="https://kit.fontawesome.com/112c18be1d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="../normalize.css">
+
+    <link rel="stylesheet" href="../Camp_Compa/nav.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="barraNav">
+        <div class="barraNav__fondo"></div>
+        <h1 class="barraNav__logo"><a href="" class="barraNav__logoIni">Fluid <span class="barraNav__logoSec">Mechanics</span></a></h1>
+        <ul class="barraNav__elems">
+            <li class="barraNav__elems--item"><a href="../index.html" class="leter">Inicio</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="../Aprendizaje/Aprendizaje.html" class="leter">Aprendizaje</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="#" class="leter">Fenómenos</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+            <li class="barraNav__elems--item"><a href="../Elementos/elementos.html" class="leter">Elementos</a><i class="fas fa-solid fa-angle-down arrow"></i></li>
+
+            <li class="calculos"><a href="../Calculos/Calculos.html" class="calculos__leter leter">Calculos</a></li>
+        </ul>
+    </header>
+
+    <section class="animacionDensidadCanica">
+        <div class="materialCanica">
+            <h3 class="nomSeccion">Material Canica</h3>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkCanica" value="0"><label for="check1" class="labelsCanica">Plástico (0.97 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkCanica" value="1"><label for="check2" class="labelsCanica">Vidrio (2.5 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkCanica" value="2"><label for="check3" class="labelsCanica">Mármol (2.7 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkCanica" value="3"><label for="check4" class="labelsCanica">Cerámica (2.8 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkCanica" value="4"><label for="check5" class="labelsCanica">Metal (7.85 g/cm3)</label>
+            </div>
+        </div>
+    
+        <div class="tipoLiquido">
+            <h3 class="nomSeccion">Material Liquidos</h3>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkLiquido" value="0"><label for="">Aceite (0.91 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkLiquido" value="1"><label for="">Agua (1.0 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox"  class="checkLiquido" value="2"><label for="">Etilenglicol (1.11 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox"  class="checkLiquido" value="3"><label for="">Glicerina (1.26 g/cm3)</label>
+            </div>
+            <div class="nombreElemento">
+                <input type="checkbox" class="checkLiquido" value="4"><label for="">Mercurio (13.6 g/cm3)</label>
+            </div>
+        </div>
+    
+        <div class="resultado">
+    
+        </div>
+    
+        <div class="elementoLiquido">
+            <div class="canica">
+                R = 0.01m
+            </div>
+            <div class="fluido">
+                <div class="distancia">
+                    h = 0.3m
+                </div>
+            </div>
+        </div>
+    
+        <div class="primero">
+            <div class="numero">0</div>
+            <div class="numero">100</div>
+            <div class="numero">200</div>
+            <div class="numero">300</div>
+            <div class="numero">400</div>
+            <div class="y">400</div>
+            <div class="y">300</div>
+            <div class="y">200</div>
+            <div class="y">100</div>
+            <div class="ejex">tiempo (s)</div>
+            <div class="ejey">Valocidad (m/s)</div>
+        </div>
+
+        <button class="refrescar">Refrescar</button>
+    </section>
+    
+    
+    <section class="animacionCubo">
+        <div id="contenedorCubo">
+            <div id="cubo">
+                <div class="cara enfrente">
+                    <canvas class="lienzo1" width= "200" height="200"></canvas>
+                </div>
+                <div class="cara atras">
+                    <canvas class="lienzo2" width= "200" height="200"></canvas>
+                </div>
+                <div class="cara arriba">
+                    <canvas class="lienzo3" width= "200" height="200"></canvas>
+                </div>
+                <div class="cara abajo">
+                    <canvas class="lienzo4" width= "200" height="200"></canvas>
+                </div>
+                <div class="cara izquierda">
+                    <canvas class="lienzo5" width= "200" height="200"></canvas>
+                </div>
+                <div class="cara derecha">
+                    <canvas class="lienzo6" width= "200" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    
+        <div class="seleccionMaterial">
+            
+        </div>
+    
+        <div class="primeroCubo">
+            <div class="numeroCubo">0</div>
+            <div class="numeroCubo">100</div>
+            <div class="numeroCubo">200</div>
+            <div class="numeroCubo">300</div>
+            <div class="numeroCubo">400</div>
+            <div class="yCubo">400</div>
+            <div class="yCubo">300</div>
+            <div class="yCubo">200</div>
+            <div class="yCubo">100</div>
+    
+            <div class="ejexCubo">Volumen (cm3)</div>
+            <div class="ejeyCubo">Masa (g)</div>
+        </div>
+    </section>
+
+    <section class="contenedorPrensa">
+        <div class="prensa">
+            <div class="cilindroUno">
+                <div class="palancaUno"></div>
+                <div class="enboloUno"></div>
+                <div class="fluidoUno"></div>
+            </div>
+            <img src="img/flecha.webp" class="img-flecha">
+            <input type="text" class="fuerza" placeholder="F(KN)">
+            <div class="comunicadorCilindro">
+                <div class="fluidoEntre"></div>
+            </div>
+            <div class="cilindoDos">
+                <div class="enboloDos"></div>
+                <div class="fluidoDos"></div>
+                <div class="palancaTres"></div>
+                <div class="plataformaDeElementos"></div>
+            </div>
+        </div>
+    
+        <div class="diametros">
+            <div class="diametroUno">
+                <input type="text" class="entradaDiametro" placeholder="D1 (m)">
+            </div>
+            <div class="diametroDos">
+                <input type="text" class="entradaDiametro" placeholder="D2 (m)">
+            </div>
+        </div>
+    
+        <button class="play">Iniciar</button>
+    </section>
+
+    <section class="animacionCaudal">
+        <div class="tuberiaUno">
+            <div class="contenedorOlasUno">
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+                <div class="ola"></div>
+            </div>
+        </div>
+
+        <div class="tuberiaDos">
+            <div class="contenedorOlasDos">
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+                <div class="olaDos"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="fenomenos.js"></script>
+</body>
+</html>
