@@ -1,0 +1,452 @@
+body {
+    /* background-color: #EAEEFA; */
+}
+
+/*Aqui empieza la seccion 1.........................*/
+.campoPrinsipal__seccion1 {
+    width: 100%;
+    position: relative;
+}
+
+
+.campoPrinsipal__seccion1 h2{
+    text-align: center;
+    font-size: 70px;
+    width: 900px;
+    margin: auto;
+    position: absolute;
+    top: 190px;
+    right: calc(50% - 500px);
+    z-index: 100;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.campoPrinsipal__seccion1 p {
+    font-size: 25px;
+    width: 1250px;
+    margin: auto;
+    position: absolute;
+    top: 450px;
+    z-index: 400;
+    right: calc(50% - 625px);
+    padding-left: 25px;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+
+}
+
+.campoPrinsipal__seccion1 img {
+    position: absolute;
+    width: 100%;
+    height: 750px;
+
+}
+
+.campoPrinsipal__seccion1 a {
+    display: block;
+    width: 300px;
+    height: 60px;
+    z-index: 600;
+    position: absolute;
+    top: 550px;
+    left: calc(50% - 125px);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vh;
+    letter-spacing: 2px;
+    border: solid 4px white;
+    line-height: 2;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
+}
+
+.campoPrinsipal__seccion1 a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.campoPrinsipal__seccion1--linea {
+    z-index: 1200;
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    top: 390px;
+    left: calc(51% - 40px);
+    background-color: white;
+}
+
+
+/*Propiedades de los fluidos. #########################################################################################################################################*/
+
+/*1. Contenedor */
+.propFluid {
+    width: 100%;
+    font-family: 'roboto', sans-serif;
+    padding-top: 3vh;
+    position: relative;
+    top: 110vh;
+    /* background-color: #e7e7e7; */
+}
+
+.propFluid__densidad--sec1 {
+    display: inline-block;
+    width: 45%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+}
+
+/*2. Propiedades Compartidas*/
+.text {
+    line-height: 2;
+    text-align: justify;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.propFluid__titulo {
+    letter-spacing: 0.2vh;
+    font-size: 3.5vh;
+    width: 80%;
+    position: relative; /*****/
+    left: 4.8%;
+    margin-bottom: 3vh;
+    color: #6495ED;
+}
+
+.propFluid__intro {
+    width: 88%;
+    margin-bottom: 10vh;
+    margin-left: 4.8%;
+    margin-right: auto;
+}
+
+.propFluid__densidad, .propFluid__volEsp {
+    width: 88%;
+    height: 110vh;
+    margin-right: 2.5%;
+    margin-left: 4.8%;
+    margin-bottom: 7vh;
+    position: relative;
+}
+
+.propFluid__densidad--titulo, .propFluid__volEsp--titulo {
+    margin-bottom: 0.6vh;
+    color: #6495ED;
+}
+
+.propFluid__densidad--texto, .propFluid__volEsp--texto { /*****************/
+    margin-bottom: 3vh;
+}
+
+.propFluid__densidad--formula, .propFluid__volEsp--formula { /**********/
+    display: block;
+    font-size: 3.5vh;
+    width: 50%;
+    position: relative;
+    left: 47.5%;
+    margin-top: 13vh;
+    margin-bottom: 6vh;
+}
+
+.propFluid__densidad--img, .propFluid__volEsp--img {
+    width: 45%;
+    height: 50vh;
+    position: absolute; /**************1********************/
+    background-color: #6495ED;
+    left: 55%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);  /************2**********************/
+}
+
+.propFluid__densidad--img {
+    width: 40%;
+    left: 60%;
+    height: 55vh;
+}
+
+.propFluid__densidad--ejercicio {
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding-left: 6vh;
+    padding-right: 6vh; 
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    width: 45%;
+    margin-right: 5%;
+    position: absolute; /***************1*******************/
+    top: 55vh;
+    margin-top: 10vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1); /************2**********************/
+}
+
+.propFluid__densidad--ejercicio-titulo {
+    color: #6495ED;
+    letter-spacing: 0.3vh;
+}
+
+.propFluid__densidad--ejercicio-enunciado {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.propFluid__densidad--ejercicio-sol {
+    display: block;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #4398d1;
+    letter-spacing: 0.3vh;
+}
+
+.unoo {
+    position: absolute;
+    top: 55vh;
+}
+
+.doss {
+    float: right;
+    position: absolute;
+    top: 55vh;
+    left: 55%;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.propFluid__densidad--ejercicio-sol, .propFluid__densidad--ejercicio {
+    transition: 0.1s ease;
+}
+/*4.2 Propiedades de transición*/
+
+.propFluid__densidad--ejercicio-sol:hover {
+    color: #33c6ff;
+}
+
+.propFluid__densidad--ejercicio:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/***###########################################################*/
+
+.oculto {
+    display: none;
+    opacity: 0; /* Inicialmente oculto y transparente */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+  
+.mostrado {
+    display: block;
+    opacity: 1; /* Visible y completamente opaco */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+
+
+/*##########################################################*/
+
+
+/*1. Contenedor */
+.propFluid__relacion--sec1 {
+    display: inline-block;
+    width: 88%;
+    height: 50vh;
+    margin-left: 4.8%;
+    position: absolute;
+    top: 0;
+}
+
+/*2. Propiedades Compartidas*/
+.text {
+    line-height: 2;
+    text-align: justify;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+.propFluid__relacion { /**********************************************/
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    padding-top: 7vh;
+    margin-bottom: 30vh;
+    position: relative;
+    background-color: #4398d1;
+}
+
+.propFluid__relacion--titulo {
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+    color: #fff;
+}
+
+.propFluid__relacion--texto {
+    margin-bottom: 3vh;
+    color: #fff;
+}
+
+.propFluid__relacion--formula {
+    display: block;
+    font-size: 3.5vh;
+    width: 5%;
+    position: relative;
+    left: 47.5%;
+    margin-top: 13vh;
+    margin-bottom: 6vh;
+    color: #fff;
+}
+
+.propFluid__relacion--ejercicio {
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding-left: 6vh;
+    padding-right: 6vh; 
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    width: 88%;
+    margin-left: 4.8%;
+    position: absolute;
+    top: 0vh;
+    margin-top: 3vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.propFluid__relacion--ejercicio-titulo {
+    color: #6495ED;
+    letter-spacing: 0.3vh;
+}
+
+.propFluid__relacion--ejercicio-enunciado {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.propFluid__relacion--ejercicio-sol {
+    display: block;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #4398d1;
+    letter-spacing: 0.3vh;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.propFluid__relacion--ejercicio-sol, .propFluid__densidad--ejercicio {
+    transition: 0.1s ease;
+}
+/*4.2 Propiedades de transición*/
+
+.propFluid__relacion--ejercicio-sol:hover {
+    color: #33c6ff;
+}
+
+.propFluid__relacion--ejercicio:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/*################### VOLUMEN ESPECIFICO ###########################################*/
+
+
+/*1. Contenedor */
+.propFluid__volEsp--sec1 { /*****************/
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+}
+
+/*2. Propiedades Compartidas*/
+.text {
+    line-height: 2;
+    text-align: justify;
+}
+
+/*3. Elementos de Derecha a Izquierda*/
+
+.propFluid__volEsp--formula { /**********************************/
+    display: inline-block;
+    left: 20%;
+}
+
+.propFluid__volEsp--lista {
+    list-style-type: none;
+}
+
+.propFluid__volEsp--img { /************************************/
+    top: 18vh;
+}
+
+.propFluid__volEsp--ejercicio {
+    display: inline-block;
+    background-color: #F5F5F5;
+    padding-left: 6vh;
+    padding-right: 6vh; 
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    width: 100%;
+    margin-right: 5%;
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    margin-top: 25vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.propFluid__volEsp--ejercicio-titulo {
+    color: #6495ED;
+    letter-spacing: 0.3vh;
+}
+
+.propFluid__volEsp--ejercicio-enunciado {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+.propFluid__volEsp--ejercicio-sol {
+    display: block;
+    margin-bottom: 3vh;
+    text-decoration: none;
+    color: #4398d1;
+    letter-spacing: 0.3vh;
+}
+
+.unoo {
+    position: absolute;
+    top: 55vh;
+}
+
+.doss {
+    float: right;
+    position: absolute;
+    top: 55vh;
+    left: 55%;
+}
+
+/*4. Animaición*/
+/*4.1 transición*/
+.propFluid__volEsp--ejercicio-sol, .propFluid__densidad--ejercicio {
+    transition: 0.1s ease;
+}
+/*4.2 Propiedades de transición*/
+
+.propFluid__volEsp--ejercicio-sol:hover {
+    color: #33c6ff;
+}
+
+.propFluid__volEsp--ejercicio:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/*############ APRENDIZAJE ############*/
+
+.apren {
+    height: 65vh;
+}
+
+.aprendiza {
+    width: 45%;
+    left: 55%;
+}
